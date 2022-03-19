@@ -32,3 +32,6 @@ class Grid():
         row = randint(0, self.rows - 1)
         column = randint(0, self.columns - 1)
         return self.get_cell(row, column)
+    
+    def size(self) -> int:
+        return self.rows * self.columns

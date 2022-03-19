@@ -18,3 +18,9 @@ def test_create_grid():
 def test_grid_random_cell():
     grid = Grid(5, 5)
     assert grid.random_cell() != None
+
+def test_grid_size():
+    grid = Grid(5, 5)
+    assert grid.size() == 25
+    grid = Grid(3, 7)
+    assert grid.size() == 21
