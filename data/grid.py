@@ -1,4 +1,5 @@
 from argparse import ArgumentError
+from random import randint
 from typing import Union
 from data.cell import Cell
 
@@ -26,3 +27,8 @@ class Grid():
         if column < 0 or column >= self.columns:
             return None
         return self.grid[row][column]
+    
+    def random_cell(self) -> Cell:
+        row = randint(0, self.rows - 1)
+        column = randint(0, self.columns - 1)
+        return self.get_cell(row, column)
