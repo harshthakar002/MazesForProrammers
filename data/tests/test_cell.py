@@ -59,10 +59,10 @@ def test_cell_is_linked():
 
 def test_cell_neighbours():
     cell = Cell(1, 2)
-    cell_north = Cell(2, 2)
+    cell_north = Cell(0, 2)
     cell_east = Cell(1, 3)
     cell_west = Cell(1, 1)
-    cell_south = Cell(0, 2)
+    cell_south = Cell(2, 2)
     cell.north = cell_north
     cell.east = cell_east
     cell.south = cell_south
@@ -76,7 +76,7 @@ def test_cell_neighbours():
 
 def test_cell_neighbours_where_not_all_neighbours():
     cell = Cell(1, 2)
-    cell_north = Cell(2, 2)
+    cell_north = Cell(0, 2)
     cell_east = Cell(1, 3)
     cell_west = Cell(1, 1)
     cell.north = cell_north
