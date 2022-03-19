@@ -35,3 +35,13 @@ class Grid():
     
     def size(self) -> int:
         return self.rows * self.columns
+    
+    def each_row(self) -> list[list[Cell]]:
+        return self.grid
+    
+    def each_cell(self) -> list[Cell]:
+        cells: list[Cell] = []
+        for row in self.grid:
+            for cell in row:
+                cells.append(cell)
+        return cells

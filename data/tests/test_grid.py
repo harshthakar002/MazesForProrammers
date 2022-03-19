@@ -24,3 +24,11 @@ def test_grid_size():
     assert grid.size() == 25
     grid = Grid(3, 7)
     assert grid.size() == 21
+
+def test_each_cell():
+    grid = Grid(3, 3)
+    cells = grid.each_cell()
+    assert len(cells) == 9
+    for i in range(3):
+        for j in range(3):
+            assert grid.get_cell(i, j) in cells
